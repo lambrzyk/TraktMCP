@@ -93,7 +93,6 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
       body: JSON.stringify({
         code,
         client_id: clientId,
-        client_secret: clientSecret,
         redirect_uri: `${baseUrl}/api/auth/callback`,
         grant_type: "authorization_code",
         ...(relayState?.nonce
